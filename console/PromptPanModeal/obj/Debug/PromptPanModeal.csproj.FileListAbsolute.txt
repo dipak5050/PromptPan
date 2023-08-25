@@ -1,0 +1,6 @@
+C:\Users\dipak.bapodara\source\repos\PromptPan\PromptPanModeal\bin\Debug\PromptPanModeal.dll
+C:\Users\dipak.bapodara\source\repos\PromptPan\PromptPanModeal\bin\Debug\PromptPanModeal.pdb
+C:\Users\dipak.bapodara\source\repos\PromptPan\PromptPanModeal\obj\Debug\PromptPanModeal.csproj.AssemblyReference.cache
+C:\Users\dipak.bapodara\source\repos\PromptPan\PromptPanModeal\obj\Debug\PromptPanModeal.csproj.CoreCompileInputs.cache
+C:\Users\dipak.bapodara\source\repos\PromptPan\PromptPanModeal\obj\Debug\PromptPanModeal.dll
+C:\Users\dipak.bapodara\source\repos\PromptPan\PromptPanModeal\obj\Debug\PromptPanModeal.pdb

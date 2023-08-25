@@ -1,0 +1,9 @@
+C:\Users\dipak.bapodara\source\repos\PromptPan\PromptPanDataAcess\bin\Debug\PromptPanDataAcess.dll
+C:\Users\dipak.bapodara\source\repos\PromptPan\PromptPanDataAcess\bin\Debug\PromptPanDataAcess.pdb
+C:\Users\dipak.bapodara\source\repos\PromptPan\PromptPanDataAcess\bin\Debug\PromptPanModeal.dll
+C:\Users\dipak.bapodara\source\repos\PromptPan\PromptPanDataAcess\bin\Debug\PromptPanModeal.pdb
+C:\Users\dipak.bapodara\source\repos\PromptPan\PromptPanDataAcess\obj\Debug\PromptPanDataAcess.csproj.AssemblyReference.cache
+C:\Users\dipak.bapodara\source\repos\PromptPan\PromptPanDataAcess\obj\Debug\PromptPanDataAcess.csproj.CoreCompileInputs.cache
+C:\Users\dipak.bapodara\source\repos\PromptPan\PromptPanDataAcess\obj\Debug\PromptPanDataAcess.csproj.CopyComplete
+C:\Users\dipak.bapodara\source\repos\PromptPan\PromptPanDataAcess\obj\Debug\PromptPanDataAcess.dll
+C:\Users\dipak.bapodara\source\repos\PromptPan\PromptPanDataAcess\obj\Debug\PromptPanDataAcess.pdb
