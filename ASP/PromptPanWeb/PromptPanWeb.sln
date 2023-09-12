@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33920.266
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PromptPanWeb", "PromptPanWeb\PromptPanWeb.csproj", "{EF3E8495-1676-4655-A346-6E6576DE4E9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PromptPanDataAcess", "..\PromptPan\PromptPanDataAcess\PromptPanDataAcess.csproj", "{EAA26D87-63A3-463A-AF74-7C7E8E6181B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PromptPanModeal", "..\PromptPan\PromptPanModeal\PromptPanModeal.csproj", "{D0FB1831-29DA-4D59-BA93-FD5E82D9867A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PromptPan", "..\PromptPan\PromptPan\PromptPan.csproj", "{8D0A9CBA-129C-4600-B903-ED3CB738118E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{39F6D1E1-90AD-49D7-8A92-C6A7DE8E0C03}"
+	ProjectSection(SolutionItems) = preProject
+		..\PromptPan\PromptPanDataAcess\Connection\SQLMConnection.cs = ..\PromptPan\PromptPanDataAcess\Connection\SQLMConnection.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF3E8495-1676-4655-A346-6E6576DE4E9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF3E8495-1676-4655-A346-6E6576DE4E9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF3E8495-1676-4655-A346-6E6576DE4E9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF3E8495-1676-4655-A346-6E6576DE4E9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAA26D87-63A3-463A-AF74-7C7E8E6181B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAA26D87-63A3-463A-AF74-7C7E8E6181B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAA26D87-63A3-463A-AF74-7C7E8E6181B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAA26D87-63A3-463A-AF74-7C7E8E6181B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0FB1831-29DA-4D59-BA93-FD5E82D9867A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0FB1831-29DA-4D59-BA93-FD5E82D9867A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0FB1831-29DA-4D59-BA93-FD5E82D9867A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0FB1831-29DA-4D59-BA93-FD5E82D9867A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D0A9CBA-129C-4600-B903-ED3CB738118E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D0A9CBA-129C-4600-B903-ED3CB738118E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D0A9CBA-129C-4600-B903-ED3CB738118E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D0A9CBA-129C-4600-B903-ED3CB738118E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FA2E5622-4C7D-4414-8988-E1A1996D25F6}
+	EndGlobalSection
+EndGlobal
