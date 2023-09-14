@@ -1,0 +1,99 @@
+function validateForm() {
+       
+        var userName = document.getElementById("txtUserName").value;
+        var address = document.getElementById("txtareaAdress").value;
+        var gender = document.querySelector('input[name="redio"]:checked');
+        var languages = document.querySelectorAll('input[type="checkbox"]:checked');
+        var city = document.getElementById("City").value;
+        var birthdate = document.getElementById("birthday").value;
+        var password = document.getElementById("pwd").value;
+        var fileUpload = document.getElementById("formFile").value;
+    
+        
+        if (userName === "") {
+            document.getElementById("usernameError").textContent = "Username is required.";
+            return false;
+        }
+    
+        if (address === "") {
+            document.getElementById("addError").textContent = "adress is required.";
+            return false;
+        }
+    
+        if (!gender) {
+            alert("Please select a gender");
+            return false;
+        }
+    
+        if (languages.length === 0) {
+            alert("Please select at least one language");
+            return false;
+        }
+    
+        if (city === "") {
+            alert("Please select a city");
+            return false;
+        }
+    
+        if (birthdate === "") {
+            document.getElementById("birthError").textContent = "adress is required.";
+            return false;
+        }
+    
+        if (password === "") {
+            document.getElementById("passError").textContent = "adress is required.";
+            return false;
+        }
+    
+        if (fileUpload === "") {
+            document.getElementById("file").textContent = "adress is required.";
+            return false;
+        }
+    
+        return true; 
+    }
+
+
+
+
+
+
+
+
+
+
+/* /* function validateForm() {
+
+var form=document.getElementById("username").value
+var username=document.getElementById("txtUserName").value
+var adress=document.getElementById("txtareaAdress").value
+var redio=document.querySelector('input[name="redio"]:checked');
+var check=document.querySelectorAll('input[name="city"]:checked');
+var City=document.getElementById("City")
+var birthday=document.getElementById("birthday").value
+var pass=document.getElementById("pwd").value
+var drop=document.getElementById("formFile")
+var spam=document.getElementById("span").vvar
+
+
+var isValid=true;
+ if(username.trim() === "") 
+ {
+    document.getElementById("usernameError").textContent = "Username is required.";
+    isValid = false;
+    }
+    // if (username === "") 
+    // {
+    //     alert("Please enter your name.");
+    //     return false;
+    // }
+    // return true;
+}
+// form.addEventListener('submit',(e)=>{
+//     if(username.value==='')
+//     {
+//         spam.innerHTML="Enter username";
+//         return false;
+//     }
+//     e.preventDefault()
+// }) */

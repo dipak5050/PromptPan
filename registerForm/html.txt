@@ -1,0 +1,159 @@
+<html>
+<head>
+<!-- <script>
+    function validateForm() {
+
+var form=document.getElementById("username").value
+var username=document.getElementById("txtUserName").value
+var adress=document.getElementById("txtareaAdress").value
+var redio=document.querySelector('input[name="redio"]:checked');
+var check=document.querySelectorAll('input[name="city"]:checked');
+var City=document.getElementById("City")
+var birthday=document.getElementById("birthday").value
+var pass=document.getElementById("pwd").value
+var drop=document.getElementById("formFile")
+var spam=document.getElementById("span").vvar
+
+
+var isValid=true;
+ if(username.trim() === "") 
+ {
+    document.getElementById("usernameError").textContent = "Username is required.";
+    isValid = false;
+    }
+    // if (username === "") 
+    // {
+    //     alert("Please enter your name.");
+    //     return false;
+    // }
+    // return true;
+} -->
+
+<script src="rag.js"></script>
+</head>
+<body>
+    
+        <form id="form" onsubmit="return validateForm()">
+        <table align="left"cellpadding="0">
+            <tr>
+                <th align="left">
+                    <label class="label">UserName:-</label>
+                 
+                
+                    <input type="text" class="body-content" id="txtUserName" placeholder="dipak">
+                    <span id="usernameError"></span>
+                </th>
+            </tr>
+            <tr>
+                <th align="left">
+                    <label class="form-label">Adress:-</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <textarea class="body-content" id="txtareaAdress" rows="3"></textarea>
+                    <span id="addError"></span>
+                </th>
+            </tr>
+            <tr>
+                <th align="left">
+                    <input class="body-content" type="radio" name="redio" id="redio">
+                    <label class="body-content">male</label>
+                    <input class="body-content" type="radio" name="redio" id="redio" checked>
+                    <label class="body-content">female</label>
+                </th>
+            </tr>
+            <tr>
+                <th align="left">
+                    <input class="body-content" type="checkbox" value="" id="Checklang">
+                    <label class="body-content">
+                        C#
+                    </label>
+                </th>
+            </tr>
+            <tr>
+                <th align="left">
+                    <input class="body-content" type="checkbox" value="" id="Checklang" checked>
+                    <label class="body-content">
+                        Android    
+                    </label>
+                </th>
+            </tr>
+            <tr>
+                <th align="left">
+                    <input class="body-content" type="checkbox" value="" id="Checklang" checked>
+                    <label class="body-content">
+                        Paython
+                </th>
+            </tr>
+            <tr>
+                <th align="left">
+                    <input class="body-content" type="checkbox" value="" id="Checklang" checked>
+                    <label class="body-content">
+                        JAVA
+                </th>
+            </tr>
+            <tr>
+                <th align="left">
+                    <label >Select City:-</label>
+                    <select name="City" id="City" class="body-content">
+                        <option value="Porbandar">Porbandar</option>
+                        <option value="Ranavav">Ranavav</option>
+                        <option value="Kutiyana">Kutiyana</option>
+                    </select>
+                </th>
+            </tr>
+            <tr>
+                <th align="left">
+                    <label>Birthdate:-</label>
+                    <input type="date" id="birthday" name="birthday" class="body-content">
+                    <span id="birthError"></span>
+                </th>
+            </tr>
+            <tr>
+                <th align="left">
+                    <label for="pwd" >Password:-</label>
+                    <input type="password" class="body-content" id="pwd" name="pwd">
+                    <span id="passError"></span>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <label >Upload a file</label>
+                    <input class="body-content" type="file" id="formFile">
+                    <span id="file"></span>
+                </th>
+            </tr>
+            <tr>
+                <th align="center">
+                    <input class="body-content" type="submit" value="Submit" id="btn">
+                   
+                </th>
+            </tr>
+        </table>
+    </form>
+
+
+    <!-- <script>
+        function validateForm() {
+
+var username=document.getElementById("txtUserName").value
+//var adress=document.getElementById("txtareaAdress").value
+var redio=document.querySelector('input[name="redio"]:checked');
+var check=document.querySelectorAll('input[name="city"]:checked');
+var City=document.getElementById("City")
+var birthday=document.getElementById("birthday").value
+var pass=document.getElementById("pwd").value
+var drop=document.getElementById("formFile")
+var spam=document.getElementById("span").value
+
+
+    if (username === "") 
+    {
+        alert("Please enter your name.");
+        return false;
+    }
+    return true;
+}
+    </script> -->
+</body>
+</html>
+
+
