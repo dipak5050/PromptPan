@@ -1,0 +1,35 @@
+﻿<html>
+<head>
+
+</head>
+<body>
+    <h2>Index</h2>
+    <div>
+        <h1></h1>
+    </div>
+    <div>
+        <ul>
+            @foreach (var item in ViewBag.username)
+            {
+                <li>@item</li>
+            }
+        </ul>
+    </div>
+    <div>
+        <ul>
+            @foreach (var item in ViewBag.mylst)
+            {
+                <li>@item.name</li>
+            }
+        </ul>
+    </div>
+    <div>
+        <ul>
+            @foreach (var item in Convert.ToString (ViewData["key"]))
+            {
+                <li>@item.name</li>
+            }
+        </ul>
+    </div>
+</body>
+</html>
