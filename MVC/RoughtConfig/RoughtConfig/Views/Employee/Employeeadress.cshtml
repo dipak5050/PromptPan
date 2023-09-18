@@ -1,0 +1,31 @@
+﻿@model RoughtConfig.Models.adress
+
+@{
+    ViewBag.Title = "Employeeadress";
+}
+
+<h2>Employeeadress</h2>
+
+<div>
+    <h4>adress</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.homenum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.homenum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.city)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.city)
+        </dd>
+
+    </dl>
+</div>
+

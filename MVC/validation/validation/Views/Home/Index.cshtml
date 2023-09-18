@@ -1,0 +1,24 @@
+﻿@model validation.Controllers.validdation
+{
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<div>
+    @using(Html.BeginForm(""))
+            {
+                <label>name:</label>
+                @Html.TextBox("name")
+        <br />
+                <label>EMail:</label>
+                @Html.TextBox("email")
+        <br />
+                <label>Age:</label>
+                @Html.TextBox("age")
+        <br />
+        <input type="submit" value="Enter" />
+
+            }
+</div>
+
