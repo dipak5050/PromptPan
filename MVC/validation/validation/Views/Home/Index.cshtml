@@ -6,19 +6,28 @@
 
 <h2>Index</h2>
 <div>
-    @using(Html.BeginForm(""))
-            {
-                <label>name:</label>
-                @Html.TextBox("name")
+    @using (Html.BeginForm("submitdata", "Home", FormMethod.Post))
+    {
+        <label>name:</label>
+        @*@Html.TextBox("name")
+        @Html.ValidationMessage("name")*@
+        @Html.TextAreaFor(x => x.name)
+        @Html.ValidationMessageFor(x=>x.name)
         <br />
-                <label>EMail:</label>
-                @Html.TextBox("email")
+        <label>EMail:</label>
+        @*@Html.TextBox("email")
+        @Html.ValidationMessage("email")*@
+        @Html.TextBoxFor(x=>x.email)
+        @Html.ValidationMessageFor(x=>x.email)
         <br />
-                <label>Age:</label>
-                @Html.TextBox("age")
+        <label>Age:</label>
+        @*@Html.TextBox("age")
+        @Html.ValidationMessage("age")*@
+        @Html.TextBoxFor(x=>x.age)
+        @Html.ValidationMessageFor(x=>x.age)
         <br />
         <input type="submit" value="Enter" />
 
-            }
+    }
 </div>
 

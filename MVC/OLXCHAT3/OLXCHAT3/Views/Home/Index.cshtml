@@ -1,0 +1,56 @@
+﻿@*@model chatdb.chat*@
+@model IEnumerable<OLXCHAT3.Models.ChatMddual>
+<style>
+    .send-button:active {
+        transform: scale(0.96)
+    }
+
+    .scroll {
+        height: 70%;
+        width: 30%;
+        border: 1px;
+        overflow: auto;
+    }
+</style>
+<div>
+    <header style="background-color:white;height:50px;width:70%; border:1px solid;float:right">
+        <h1>ProductId</h1>
+    </header>
+    <header style="background-color: white; height: 50px; width: 30%; border: 1px solid; background-color: rgba(235,238,239,1); ">
+        <h1>inbox</h1>
+    </header>
+</div>
+<div style="height: 400px; width: 30%;">
+    @RenderPage("~/Views/Home/select.cshtml");
+</div>
+<div>
+    <footer style=" height: 20px; width: 100%;">
+
+        @using (Html.BeginForm())
+        {
+            <input type="submit" value="Send" id="send-button" class="send-button" style="float: right; width: 20%; padding: 10px; background-color: #007bff; border: none; color: #fff; transition:transform 0.2s ease" />
+            @Html.TextArea("msg", "", new { Type = "msg", placeholder = "type message hear", id = "chat", style = "width:400px; float:right" });
+        }
+    </footer>
+
+</div>
+<script>
+    function btnclick()
+    {
+        $("#send-button").click(function () {
+            $.ajax(
+                {
+                    type: "post",
+                    URL: "~/Models/DBContext",
+                    data: {
+                        chat: $("#chat").val()
+                    },
+
+                    success: function (da) {
+                        alert(da)
+                    }
+                }
+            );
+        })
+    }
+</script>

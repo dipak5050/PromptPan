@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OLX_DBModelStoreContainer" CdmEntityContainer="OLX_DBEntities">
+    <EntitySetMapping Name="chats">
+      <EntityTypeMapping TypeName="OLX_DBModel.chat">
+        <MappingFragment StoreEntitySet="chat">
+          <ScalarProperty Name="ChatId" ColumnName="ChatId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="BuyOrSellId" ColumnName="BuyOrSellId" />
+          <ScalarProperty Name="chat1" ColumnName="chat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

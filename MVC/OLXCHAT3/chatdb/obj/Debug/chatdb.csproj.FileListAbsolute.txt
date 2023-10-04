@@ -1,0 +1,12 @@
+C:\Users\dipak.bapodara\source\repos\OLXCHAT3\chatdb\bin\Debug\chatdb.dll.config
+C:\Users\dipak.bapodara\source\repos\OLXCHAT3\chatdb\bin\Debug\chatdb.dll
+C:\Users\dipak.bapodara\source\repos\OLXCHAT3\chatdb\bin\Debug\chatdb.pdb
+C:\Users\dipak.bapodara\source\repos\OLXCHAT3\chatdb\bin\Debug\EntityFramework.dll
+C:\Users\dipak.bapodara\source\repos\OLXCHAT3\chatdb\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\dipak.bapodara\source\repos\OLXCHAT3\chatdb\bin\Debug\EntityFramework.xml
+C:\Users\dipak.bapodara\source\repos\OLXCHAT3\chatdb\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\dipak.bapodara\source\repos\OLXCHAT3\chatdb\obj\Debug\chatdb.csproj.AssemblyReference.cache
+C:\Users\dipak.bapodara\source\repos\OLXCHAT3\chatdb\obj\Debug\chatdb.csproj.CoreCompileInputs.cache
+C:\Users\dipak.bapodara\source\repos\OLXCHAT3\chatdb\obj\Debug\chatdb.csproj.CopyComplete
+C:\Users\dipak.bapodara\source\repos\OLXCHAT3\chatdb\obj\Debug\chatdb.dll
+C:\Users\dipak.bapodara\source\repos\OLXCHAT3\chatdb\obj\Debug\chatdb.pdb

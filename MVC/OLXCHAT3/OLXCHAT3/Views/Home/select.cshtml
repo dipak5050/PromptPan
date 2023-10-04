@@ -1,0 +1,300 @@
+﻿@model IEnumerable<OLXCHAT3.Models.ChatMddual>
+
+@*@model OLXCHAT3.Models.models*@
+
+@*@using OLXCHAT3.Model;
+    @model models*@
+
+
+
+
+@*<script>
+        function Chat() {
+            //let BOSID = document.getElementById("BOSID").value;
+            //if (BOSID === 0) {
+            //    document.body.style.backgroundColor="blue";
+
+            //}
+            document.addEventListener("DOMContentLoaded", function () {
+                var rows = document.querySelectorAll("tr.blue-bg");
+                rows.forEach(function (row) {
+                    row.style.backgroundColor = "blue";
+                });
+            });
+        }
+
+    </script>
+
+    <h2>Index</h2>
+    <table class="table" on="return Chat()">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ChatId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UserId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BuyOrSellId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Chat)
+                </th>
+                <th></th>
+            </tr>
+
+
+            @foreach (var item in Model)
+            {
+                <tr class="@(item.BuyOrSellId == 0 ? "blue-bg" : "")">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ChatId )
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BuyOrSellId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Chat)
+                    </td>
+
+                </tr>
+            }
+        </table>*@
+@*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ChatId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BuyOrSellId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chat)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr class="@(item.BuyOrSellId == 0 ? "light-blue-bg" : "")">
+                <td>
+                    @Html.DisplayFor(modelItem => item.ChatId);
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BuyOrSellId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Chat)
+                </td>
+            </tr>
+        }
+    </table>*@
+<style>
+    .send-button:active {
+        transform: scale(0.96)
+    }
+
+    .scroll {
+        height: 70%;
+        width: 30%;
+        border: 1px;
+        overflow: auto;
+    }
+</style>
+<div>
+    <h3>@TempData["InsertMsg"]</h3>
+    <header style="background-color:white;height:50px;width:70%; border:1px solid;float:right">
+        <h1>ProductId</h1>
+    </header>
+    <header style="background-color: white; height: 50px; width: 30%; border: 1px solid; background-color: rgba(235,238,239,1); ">
+        <h1 style="text-align:center">inbox</h1>
+    </header>
+</div>
+
+<div class="Scroll_bar">
+    <table class="table" style="float:right;">
+        @foreach (var item in Model)
+        {
+            <tr class="@(item.BuyOrSellId == 0  ? "light-blue-bg" : "")">
+                <td style="float:right;">
+                    @Html.DisplayFor(modelItem => item.Chat1)<br />
+
+                    @Html.DisplayFor(modelItem => item.BuyOrSellId)
+                </td>
+
+            </tr>
+            <tr></tr>
+            <tr></tr>
+        }
+    </table>
+</div>
+
+<div style="height: 400px; width: 29%;  float:left;">
+    <table class="table" style="float:right">
+        @*@foreach (var userId in Model)*@
+        @foreach (var userId in Model.Where(item => item.BuyOrSellId == 0).Select(item => item.UserId).Distinct())
+
+        {
+            <tr>
+                <td style="float:right;">
+                    @*@Html.DisplayFor(modelItem => userId.userId)<br />*@
+
+                    <a href="javascript:void(0);" class="user-link" data-user-id="@userId">@userId</a><br />
+                </td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+        }
+    </table>
+</div>
+<div>
+    <footer style=" height: 20px; width: 100%; float:right">
+
+        @using (Html.BeginForm("select", "Home", FormMethod.Post))
+        {
+            <input type="submit" value="Send" id="send-button" class="send-button" style="float: right; width: 20%; padding: 10px; background-color: #007bff; border: none; color: #fff; transition:transform 0.2s ease" />
+            @Html.TextArea("msg", "", new { Type = "msg", placeholder = "type message hear", id = "chat", style = "width:400px; float:right" });
+        }
+    </footer>
+</div>
+
+@*<div>
+        @RenderPage("_chat2.cshtml");
+    </div>*@
+
+<script>
+    function btnclick() {
+        $("#send-button").click(function () {
+            $.ajax(
+                {
+                    type: "post",
+                    URL: "~/Models/DBContext",
+                    data:
+                    {
+                        chat: $("#chat").val()
+                    },
+
+                    success: function (da) {
+                        alert(da)
+                    }
+                }
+
+
+            );
+        })
+    }
+</script>
+@*<script>
+        // Add this JavaScript code to change the background color of rows with BuyOrSellId = 0
+        document.addEventListener("DOMContentLoaded", function () {
+            var rows = document.querySelectorAll("tr.light-blue-bg");
+            rows.forEach(function (row) {
+                row.style.backgroundColor = "blue";
+            });
+        });
+    </script>*@
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var userLinks = document.querySelectorAll('.user-link');
+
+        userLinks.forEach(function (userLink) {
+            userLink.addEventListener('click', function () {
+                var selectedUserId = this.getAttribute('data-user-id');
+
+
+                console.log('Clicked User ID:', selectedUserId);
+            });
+        });
+    });
+</script>
+<style>
+    .light-blue-bg {
+        background-color: #ceddff;
+        float: left;
+    }
+
+    .Scroll_bar {
+        margin: 0 8px;
+        z-index: 1;
+        border-radius: 4px;
+        border-bottom-left-radius: 0;
+        line-height: 19px;
+        position: relative;
+        display: inline-block;
+        box-sizing: border-box;
+        max-width: 80%;
+        font-size: 14px;
+        box-shadow: none;
+        word-wrap: break-word;
+        height: 400px;
+        width: 69%;
+        font-family: inherit;
+        overflow: auto;
+        float: right;
+        overflow-y: auto;
+        box-sizing: border-box;
+        padding-top: 8px;
+        background-size: 200px;
+        background-color: var(--background);
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+<div data-aut-id="locationBox" class="bGCL7"><svg width="25px" height="25px" viewBox="0 0 1024 1024" data-aut-id="icon" class="" fill-rule="evenodd"><path class="rui-w4DG7" d="M448 725.333c-152.917 0-277.333-124.416-277.333-277.333s124.416-277.333 277.333-277.333c152.917 0 277.333 124.416 277.333 277.333s-124.416 277.333-277.333 277.333v0zM884.437 824.107v0.021l-151.915-151.936c48.768-61.781 78.144-139.541 78.144-224.192 0-199.979-162.688-362.667-362.667-362.667s-362.667 162.688-362.667 362.667c0 199.979 162.688 362.667 362.667 362.667 84.629 0 162.411-29.376 224.171-78.144l206.144 206.144h60.352v-60.331l-54.229-54.229z"></path></svg><input class="_1dasd" placeholder="Search city, area or locality" value="Ahmedabad, Gujarat"><span class="_3UNpw dXoOG"><button type="button" class="rui-3a8k1" role="button" tabindex="0" data-aut-id="" title=""><svg width="24px" height="24px" viewBox="0 0 1024 1024" data-aut-id="icon" class="" fill-rule="evenodd"><path class="rui-w4DG7" d="M85.392 277.333h60.331l366.336 366.336 366.336-366.336h60.331v60.331l-408.981 409.003h-35.307l-409.045-409.003z"></path></svg></button></span></div>
+<style>
+    ._1JkUe .bGCL7 {
+        display: flex;
+        align-items: center;
+        height: 48px;
+        background: var(--white);
+        padding: 0 8px;
+        box-sizing: border-box;
+        border: 2px solid var(--blackText);
+        border-radius: 4px;
+    }
+
+    user agent stylesheet
+    div {
+        display: block;
+    }
+
+    ._3HfeF {
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+        color: var(--primaryBaseText);
+    }
+
+    ._2yqpe body, ._2yqpe button, ._2yqpe input, ._2yqpe optgroup, ._2yqpe select, ._2yqpe textarea {
+        font-family: var(--customLTRFont);
+    }
+</style>

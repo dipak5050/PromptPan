@@ -1,0 +1,17 @@
+﻿@model OLXCHAT3.Models.ChatMddual
+@{
+    ViewBag.Title = "chat2";
+}
+
+<h2>chat2</h2>
+<<div>
+    <footer style=" height: 20px; width: 100%; float:right">
+
+        @using (Html.BeginForm("select", "Home", FormMethod.Post))
+        {
+            <input type="submit" value="Send" id="send-button" class="send-button" style="float: right; width: 20%; padding: 10px; background-color: #007bff; border: none; color: #fff; transition:transform 0.2s ease" />
+            @Html.TextArea("msg", "", new { Type = "msg", placeholder = "type message hear", id = "chat", style = "width:400px; float:right" });
+        }
+    </footer>
+</div>
+
